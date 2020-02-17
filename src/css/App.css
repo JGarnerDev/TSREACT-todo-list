@@ -1,0 +1,19 @@
+html, body, #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#doStuff {
+    position: absolute;
+    bottom:50%;
+    font-size: 8em;
+    font-style: italic;
+    z-index: 1;
+    opacity: 0.5;
+
+}

@@ -1,0 +1,25 @@
+.todoItem {
+    display: flex;
+    width: 100%;
+    min-height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    background-color: aquamarine;
+    z-index: 2;
+    opacity: 0.8;
+}
+.todoItem-label {
+    display: flex;
+    max-width: 250px;
+    margin: 2%;
+    word-break: break-all;
+    
+}
+.remove-button {
+   margin-right: 2%;
+   background-color: rgb(238, 238, 238);
+   z-index: 3;
+   opacity: initial;
+}
+

@@ -1,0 +1,12 @@
+#AddTodo {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+    height: 5%;
+    width: 200px;
+}
+#AddTodo-input {
+min-width: 200px;
+margin-right: 10px ;
+}
+
