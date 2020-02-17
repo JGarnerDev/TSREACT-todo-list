@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { List } from "./List";
+import { AddTodo } from "./AddTodo";
 
-function App() {
+const initialTodos: Array<Todo> = [
+  { isDone: true, text: "Slam, welcome to the Jam" },
+  { isDone: false, text: "Slamo" }
+];
+
+const App: React.FC = () => {
+  const [todos, setTodos] = useState(initialTodos);
+
+  const toggleTodo: ToggleTodo = selectedTodo => {
+    const newTodos = todos.map(todo => {
+      if (todo === selectedTodo) {
+        return {
+          ...todo,
+          isDone: !todo.isDone
+        };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  const addTodo = (newTodo: string) => {
+      setTodos([...todos, {text: newTodo, isDone: false}])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <List todos={todos} toggleTodo={toggleTodo} />
+      <AddTodo addTodo={addTodo} />
+    </React.Fragment>
   );
-}
+};
 
 export default App;
