@@ -44,8 +44,9 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <List todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
-      <AddTodo addTodo={addTodo} />
       <div id="doStuff">do stuff</div>
+      <AddTodo addTodo={addTodo} />
+    
     </React.Fragment>
   );
 };

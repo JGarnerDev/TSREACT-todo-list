@@ -1,7 +1,6 @@
 html, body, #root {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -9,9 +8,9 @@ html, body, #root {
 }
 
 #doStuff {
-    position: absolute;
+    position: sticky;
     bottom:50%;
-    font-size: 8em;
+    font-size: calc(1vh + 20vw);
     font-style: italic;
     z-index: 1;
     opacity: 0.5;
